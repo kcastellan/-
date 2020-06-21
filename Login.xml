@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<androidx.constraintlayout.widget.ConstraintLayout tools:layout_editor_absoluteY="81dp" tools:context=".LoginActivity" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:gravity="center" android:layout_weight="1" android:layout_marginBottom="5dp" android:id="@+id/Linear">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView" android:textStyle="bold" android:textSize="24sp" android:text="가스 현황" android:layout_marginTop="4dp"/>
+
+</LinearLayout>
+
+
+-<GridLayout android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight=".25" android:id="@+id/Grid" android:rowCount="2" android:columnCount="2">
+
+
+-<LinearLayout android:layout_height="0dp" android:layout_width="0dp" android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_columnWeight="1" android:layout_rowWeight="1" android:background="@color/colorPrimary">
+
+<TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:layout_weight="1" android:textStyle="bold" android:textSize="18sp" android:text="1동"/>
+
+
+-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="4">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp" android:layout_marginLeft="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0101"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0102"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0103"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0104"/>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0101" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0102" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0103" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0104" android:text="0"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="0dp" android:layout_width="0dp" android:orientation="vertical" android:layout_columnWeight="1" android:layout_rowWeight="1" android:background="@color/colorGreen">
+
+<TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:layout_weight="1" android:textStyle="bold" android:textSize="18sp" android:text="2동"/>
+
+
+-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="4">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp" android:layout_marginLeft="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0105"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0106"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0107"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0108"/>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0105" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0106" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0107" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0108" android:text="0"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="0dp" android:layout_width="0dp" android:orientation="vertical" android:layout_columnWeight="1" android:layout_rowWeight="1" android:background="@color/colorGreen">
+
+<TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:layout_weight="1" android:textStyle="bold" android:textSize="18sp" android:text="3동"/>
+
+
+-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="4">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp" android:layout_marginLeft="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0109"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0110"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0111"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0112"/>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0109" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0110" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0111" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0112" android:text="0"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="0dp" android:layout_width="0dp" android:orientation="vertical" android:layout_columnWeight="1" android:layout_rowWeight="1" android:background="@color/colorPrimary">
+
+<TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:layout_weight="1" android:textStyle="bold" android:textSize="18sp" android:text="4동"/>
+
+
+-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="4">
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp" android:layout_marginLeft="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0113"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0114"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0115"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:textStyle="bold" android:text="가스_0116"/>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="20dp">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0113" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0114" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0115" android:text="0"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="center" android:layout_marginBottom="10dp" android:id="@+id/gas_0116" android:text="0"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</GridLayout>
+
+
+-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/current" android:textStyle="bold" android:textSize="20sp" android:text="총 16개소 정상 작동 중" android:textColor="#000000"/>
+
+<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/details" android:textSize="20sp" android:text="자세히" android:visibility="visible" android:onClick="bOnClick"/>
+
+</LinearLayout>
+
+
+-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center">
+
+<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/stop" android:textSize="20sp" android:text="일시정지" android:onClick="bOnClick" android:enabled="false"/>
+
+<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/reset" android:textSize="20sp" android:text="리셋" android:onClick="bOnClick" android:enabled="false"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
