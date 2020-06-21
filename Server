@@ -1,0 +1,101 @@
+package ser;
+
+import java.util.*;
+import de.re.easymodbus.exceptions.ModbusException;
+import de.re.easymodbus.modbusclient.ModbusClient;
+import java.net.*;
+import java.io.*;
+
+public class Main {
+
+	static byte[] value = new byte[100];
+	static byte[] gas = new byte[16];
+	static byte count = 3;
+	static ModBusTCP modbustcp;
+	static ModbusClient modbusClient;
+
+	public final static int PORT = 5000;
+
+	public static void main(String[] args) throws UnknownHostException, IOException {
+
+		modbusClient = new ModbusClient("192.168.0.121", 5000);
+		modbusClient.Connect();
+		DatagramSocket dsock = null;
+
+		try {
+
+			System.out.println("UDP Time Server 클라이언트의 접속을 기다림 " + new Date());
+			dsock = new DatagramSocket(PORT);
+			modbusClient.WriteSingleRegister(39995, 100);
+
+			while (true) {
+				modbustcp = new ModBusTCP();
+				modbustcp.start();
+				byte[] buffer = new byte[1024];
+				DatagramPacket receivePacket = new DatagramPacket(buffer, buffer.length);
+				
+				dsock.receive(receivePacket);
+				
+				String msg = new String(receivePacket.getData(), 0, receivePacket.getLength());
+				System.out.println("Client 에서 보낸 메시지 : " + msg);
+				
+				if (msg.equals("stop")) {
+					System.out.println("일시정지");
+					try {
+						for (int i = 0; i < 16; i++) {
+							modbusClient.WriteSingleRegister(39995 - (6 * (15 - i)), 1);
+						}
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				} else if (msg.equals("reset")) {
+					System.out.println("리셋");
+					try {
+						for (int i = 0; i < 16; i++) {
+							modbusClient.WriteSingleRegister(39995 - (6 * (15 - i)), 2);
+						}
+
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			
+				DatagramPacket sendPacket = new DatagramPacket(gas, gas.length, receivePacket.getAddress(),
+						receivePacket.getPort());
+				dsock.send(sendPacket);
+				Thread.sleep(3000);
+			}
+		} catch (Exception ex) {
+			System.out.println(ex);
+		} finally {
+			if (dsock != null)
+				dsock.close();
+		}
+	}
+
+	private static class ModBusTCP extends Thread { // 모드버스 TCP 연결해서 값을 전달하는 내용
+
+		public void run() {
+			try {
+
+				// modbusClient.WriteSingleRegister(39995, 2);
+
+				System.out.println("연결");
+
+				for (int i = 3; i < 35; i++) // 전체 읽기
+					value[i] = (byte) modbusClient.ReadHoldingRegisters(40000, 64)[i];
+				for (int i = 0; i < 64; i++)
+					value[35 + i] = (byte) modbusClient.ReadHoldingRegisters(40035, 64)[i];
+				for (int i = 0; i < 16; i++) { // 가스값만 따로 저장
+					gas[i] = (byte) value[3 + (6 * i)];
+					System.out.print(gas[i] + " ");
+				}
+				
+			} catch (Exception ex) {
+				System.err.println(ex);
+			}
+
+		}
+	}
+
+}
